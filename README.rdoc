@@ -27,6 +27,10 @@ Things you may want to cover:
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
+<<<<<<< HEAD
 
 
 Ben Torgerson
+=======
+Charles Bassett
+>>>>>>> 2aba42bcfe1ef1b40f4c194b088e94bf17510b05
