@@ -10,5 +10,16 @@
 
 <%= yield %>
 
+
+if @current_user
+<p class="welcome">Welcome, #{@current_user.name}!</p>
+<%= link_to 'Log Out', logout_path %>
+else
+<p class="login">
+  <%= link_to 'Log in with your Twitter account', '/auth/twitter' %>
+</p>
+
+
+
 </body>
 </html>

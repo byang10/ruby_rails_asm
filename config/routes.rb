@@ -53,4 +53,8 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+get  'auth/:provider/callback' => 'sessions#create'
+post 'logout' => 'sessions#destroy'
+get  'auth/failure' => 'sessions#failure'
 end
