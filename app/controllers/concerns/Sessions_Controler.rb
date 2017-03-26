@@ -6,11 +6,11 @@ class SessionsController < ApplicationController
     user=User.find_by_provider_and_uid(auth["provider"],auth["uid"]) ||
       User.create_with_omniauth(auth)
     session[:user_id] = user.id
-    redirect_to movies_path
+    redirect_to home_path
   end
   def destroy
     session.delete(:user_id)
     flash[:notice] = 'Logged out successfully.'
-    redirect_to movies_path
+    redirect_to home_path
   end
 end
