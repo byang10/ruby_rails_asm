@@ -1,0 +1,25 @@
+<div class="col-md-10">
+    <h1>Time</h1>
+    
+    <button class="btn btn-primary" type="button">Add an Entry</button>
+    <div class="well">
+        <table class="table table-striped">
+            <tr>
+                <th>Entry Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+            <% @entries.each do |entry| %>
+                <tr>
+                    <td><a><% entry.date %></a></td>
+                    <td><% entry.start_time %></td>
+                    <td><% entry.end_time %></td>
+                    <td><% entry.category %></td>
+                    <td><% entry.description %></td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+</div>
