@@ -1,23 +1,18 @@
 <div class="col-md-10">
     <h1>Time</h1>
-    
-    <button class="btn btn-primary" type="button">Add an Entry</button>
+    <%= button_to 'Add Entry', new_entry_path, :class => 'btn btn-lg btn-primary', :method => 'get' %>
     <div class="well">
         <table class="table table-striped">
             <tr>
-                <th>Entry Date</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-                <th>Category</th>
                 <th>Description</th>
+                <th>Start Date/Time</th>
+                <th>End Date/Time</th>
             </tr>
             <% @entries.each do |entry| %>
                 <tr>
-                    <td><a><% entry.date %></a></td>
-                    <td><% entry.start_time %></td>
-                    <td><% entry.end_time %></td>
-                    <td><% entry.category %></td>
-                    <td><% entry.description %></td>
+                    <td><%= entry.content %></td>
+                    <td><%= entry.started_at %></td>
+                    <td><%= entry.ended_at %></td>
                 </tr>
             <% end %>
         </table>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get '/', to: 'entries#index', as: 'welcome'
   
   resources :entries
