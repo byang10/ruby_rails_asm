@@ -12,13 +12,13 @@ class EntriesController < ApplicationController
   end
   
   def create
-      
-  end
-
-  def store
       @entry = Entry.create!(entry_params)
       flash[:notice] = "Entry created"
       redirect_to entries_path
+  end
+
+  def new
+      
   end
 
   def edit
