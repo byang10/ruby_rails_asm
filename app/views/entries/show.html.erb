@@ -2,7 +2,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3><strong>Entry</strong></h3>
-        </div>
+        </div>`
         <div class="panel-body">
             <%-# Title for the Start Date/Time-%>
             <h4><strong>Start Date/Time</strong></h4>
@@ -14,6 +14,8 @@
             <br><br>
             <h4><strong>Description</strong></h4>
             <%= @entry.content %>
+            <br><br>
+            <%= button_to 'Edit Entry', edit_entry_path, :class => 'btn btn-lg btn-primary', :method => 'get' %>
             <br><br>
             <%= button_to 'Delete Entry', entry_path, :class => 'btn btn-danger', :method => 'delete' %>
         </div>
