@@ -1,18 +1,2 @@
-<div class="col-md-6">
-    <div class="panel panel-default">
-        <div class="panel-heading"><h4>Edit a Entry</h4></div>
-        <div class="panel-body">
-            <%= form_tag(controller: "entries", action: "create", method: "post") do %>
-                <div class="form-group">
-                    <label for="started_at">Start Date/Time</label>
-                    <input class="form-control" type="datetime-local" id="started_at" name="entry[started_at]">
-                    <label for="ended_at">End Date/Time</label>
-                    <input class="form-control" type="datetime-local" id="ended_at" name="entry[ended_at]">
-                    <label for="content">Description</label>
-                    <textarea class="form-control" id="content" name="entry[content]"></textarea>
-                    <button class="btn btn-lg btn-primary" type="submit">Save Entry</button>
-                </div>
-            <% end %>
-        </div>
-    </div>
-</div>
+<h1>Entries#edit</h1>
+<p>Find me in app/views/entries/edit.html.erb</p>
