@@ -6,7 +6,7 @@ class CreateEntries < ActiveRecord::Migration
       t.text :content, null: false
       t.integer :user_id
       
-      #add_foreign_key :entries :users
+      add_foreign_key :entries, :users
 
       t.timestamps null: false
     end

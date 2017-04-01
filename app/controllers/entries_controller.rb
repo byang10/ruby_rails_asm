@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   end
   
   def index
-      @entries = Entry.all#current_user.entries
+      @entries = current_user.entries
   end
 
   def show
@@ -12,7 +12,10 @@ class EntriesController < ApplicationController
   end
   
   def create
+      puts entry_params
       @entry = Entry.create!(entry_params)
+      @entry.user_id = current_user.id
+      @entry.save
       flash[:notice] = "Entry created"
       redirect_to entries_path
   end

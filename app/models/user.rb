@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+    has_many :entries
+    
     attr_accessor :password
     before_save :encrypt_password
     
@@ -21,4 +23,5 @@ class User < ActiveRecord::Base
            self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
        end
     end
+
 end
