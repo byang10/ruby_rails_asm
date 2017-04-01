@@ -11,6 +11,9 @@
         <div class="col-md-7">
             <div class="well">
                 <div class="form-group">
+                    <% if flash[:notice] %>
+                        <div class="notice"><%= flash[:notice] %></div>
+                    <% end %>
                     <h1>Log in</h1>
                         <%= form_tag sessions_path do %>
                           <p>
