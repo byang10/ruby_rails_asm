@@ -20,6 +20,13 @@
 <div class="navbar">
   <div class="well">
     <h3>Activities Tracker</h3>
+    <% if current_user %>
+      Logged in as <%= current_user.email %>
+      <%= link_to "Log Out", log_out_path %>
+    <% else %>
+      <%= link_to "Sign Up", sign_up_path %>
+      <%= link_to "Log In", log_in_path %>
+    <% end %>
   </div>
 </div>
 
