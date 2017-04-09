@@ -1,0 +1,31 @@
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h4>Create a New Category</h4></div>
+        <div class="panel-body">
+            <%= form_tag(controller: "categories", action: "create", method: "post") do %>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" id="name" name="category[name]">
+                    <label for="content">Description</label>
+                    <textarea class="form-control" id="content" name="category[description]"></textarea>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Would you say that this category of time spend is generally positive or negative towards your goals?</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            Positive&nbsp;<input type="radio" id="positive" name="category[positive]" value="true">
+                        </div>
+                        <div class="col-md-3">
+                            Negative&nbsp;<input type="radio" id="negative" name="category[positive]" value="false"><br>
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="btn btn-lg btn-primary" type="submit">Create Category</button>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="col-md-10">
+    <h1>Categories</h1>
+    <br>
+    <%= button_to 'Create Category', new_entry_path, :class => 'btn btn-lg btn-primary', :method => 'get' %>
+    <br>
+    <div class="well">
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <% @categories.each do |cat| %>
+                <tr>
+                    <% if cat.positive %>
+                        <td style="color: blue;"><%= cat.name %></td>
+                        <td style="color: blue;"><%= cat.description %></td>
+                    <% else %>
+                        <td style="color: red;"><%= cat.name %></td>
+                        <td style="color: red;"><%= cat.description %></td>
+                    <% end %>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+</div>
