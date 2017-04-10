@@ -2,16 +2,16 @@
     <div class="panel panel-default">
         <div class="panel-heading"><h4>Edit Entry</h4></div>
         <div class="panel-body">
-            <%= form_tag(controller: "entries", action: "edit", method: "patch") do %>
+            <%= form_for @entry, url: { action: "update" } do |f| %>
                 <div class="form-group">
                     <label for="started_at">Start Date/Time</label>
-                    <input class="form-control" type="datetime-local" value="<%=@entry.started_at%>" id="started_at" name="entry[started_at]">
+                    <textarea class="form-control" id="started_at" name="entry[started_at]" type="datetime-local"> <%=@entry.started_at%> </textarea>
                     <label for="ended_at">End Date/Time</label>
                     <input class="form-control" type="datetime-local" value="<%=@entry.ended_at%>" id="ended_at" name="entry[ended_at]">
                     <label for="content">Description</label>
                     <textarea class="form-control" id="content" name="entry[content]"><%=@entry.content%></textarea>
                     <br><br>
-                    <button class="btn btn-lg btn-primary" type="submit">Save Entry</button>
+                    <%= f.submit "Save Entry", :class => 'btn btn-lg btn-primary' %>
                 </div>
             <% end %>
         </div>

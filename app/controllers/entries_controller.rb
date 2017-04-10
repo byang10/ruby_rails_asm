@@ -27,7 +27,7 @@ class EntriesController < ApplicationController
 
   def update
       @entry = Entry.find params[:id]
-      @entry.update_attributes! movie_params
+      @entry.update_attributes! entry_params
       flash[:notice] = "Entry updated"
       redirect_to entry_path(@entry)
   end
