@@ -1,0 +1,29 @@
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3><strong>Category</strong></h3>
+        </div>`
+        <div class="panel-body">
+            <%-# Title for the Start Date/Time-%>
+            <h4><strong>Name</strong></h4>
+            <%-# Instances started time/date -%>
+            <%= @category.name %>
+            <br><br>
+            <h4><strong>Description</strong></h4>
+            <%= @category.description %>
+            <br><br>
+            <h4><strong>Positive</strong></h4>
+            <%= @category.positive %>
+            <br><br>
+            <h4><strong>Created At</strong></h4>
+            <%= @category.created_at %>
+            <br><br>
+            <h4><strong>Updated At</strong></h4>
+            <%= @category.updated_at %>
+            <br><br>
+            <%= button_to 'Edit Category', edit_category_path, :class => 'btn btn-lg btn-primary', :method => 'get' %>
+            <br><br>
+            <%= button_to 'Delete Categorty', category_path, :class => 'btn btn-danger', :method => 'delete' %>
+        </div>
+    </div>
+</div>
