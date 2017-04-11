@@ -1,0 +1,40 @@
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h4>Edit Category</h4></div>
+        <div class="panel-body">
+            <%= form_for @category, url: { action: "update" } do |f| %>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" id="name" name="category[name]" value="<%= @category.name %>">
+                    <label for="content">Description</label>
+                    <textarea class="form-control" id="content" name="category[description]"><%= @category.description %></textarea>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Would you say that this category of time spent is generally positive or negative towards your goals?</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <% if @category.positive %>
+                            <div class="col-md-3">
+                                Positive&nbsp;<input type="radio" id="positive" name="category[positive]" value="true" checked="true">
+                            </div>
+                            <div class="col-md-3">
+                                Negative&nbsp;<input type="radio" id="negative" name="category[positive]" value="false"><br>
+                            </div>
+                        <% else %>
+                            <div class="col-md-3">
+                                Positive&nbsp;<input type="radio" id="positive" name="category[positive]" value="true">
+                            </div>
+                            <div class="col-md-3">
+                                Negative&nbsp;<input type="radio" id="negative" name="category[positive]" value="false" checked="true"><br>
+                            </div>
+                        <% end %>
+                    </div>
+                    <hr>
+                    <%= f.submit "Save Category", :class => 'btn btn-lg btn-primary' %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

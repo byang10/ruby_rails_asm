@@ -1,0 +1,36 @@
+<div class="col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3><strong>Entry</strong></h3>
+        </div>
+        <div class="panel-body">
+            <%-# Title for the Start Date/Time-%>
+            <h4><strong>Name</strong></h4>
+            <%-# Instances started time/date -%>
+            <%= @category.name %>
+            <br><br>
+            <h4><strong>Description</strong></h4>
+            <%= @category.description %>
+            <br><br>
+            <h4><strong>Positivity</strong></h4>
+            <% if @category.positive %>
+                <p style="color: blue;">
+                    <span style="color: blue;" class="glyphicon glyphicon-ok"></span>&nbsp;This is a category of positive action
+                </p>
+            <% else %>
+                <p style="color: red;">
+                    <span style="color: red;" class="glyphicon glyphicon-remove"></span>&nbsp;This is a category of negative action
+                </p>
+            <% end %>
+            <hr>
+            <div class="row">
+                <div class="col-md-2">
+                    <%= button_to 'Edit Category', edit_category_path, :class => 'btn btn-warning', :method => 'get' %>
+                </div>
+                <div class="col-md-2">
+                    <%= button_to 'Delete Category', category_path, :class => 'btn btn-danger', :method => 'delete' %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

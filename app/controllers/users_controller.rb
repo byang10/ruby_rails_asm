@@ -15,7 +15,7 @@ class UsersController < ApplicationController
             redirect_to entries_path 
         else 
             redirect_to '/signup'
-        end 
+        end
     end
     
     private

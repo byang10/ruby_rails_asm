@@ -5,6 +5,7 @@ class CreateCategories < ActiveRecord::Migration
       t.string :name, null: false
       t.string :description, null: false
       t.boolean :positive, null: true
+      t.integer :user_id
       
       add_foreign_key :categories, :users
 

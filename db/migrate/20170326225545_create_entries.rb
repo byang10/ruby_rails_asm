@@ -5,8 +5,10 @@ class CreateEntries < ActiveRecord::Migration
       t.datetime :ended_at, null: false
       t.text :content, null: false
       t.integer :user_id
+      t.integer :category_id
       
       add_foreign_key :entries, :users
+      add_foreign_key :entries, :categories
 
       t.timestamps null: false
     end
