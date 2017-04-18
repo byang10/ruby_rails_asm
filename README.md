@@ -8,12 +8,12 @@
 4. Add your SSH key to the new workspace
 5. Clone your forked repository `git clone <git@github.com:yourusername/ruby_rails_asm.git>`
 6. CD into the directory `ruby_rails_asm`
-  - If you are on a new workspace, you must run `gem install rails`
+- If you are on a new workspace, you must run `gem install rails`
 7. Run `bundle install` to install dependencies
-8. Run the app
-
- On C9, the command is `rails s -p $PORT -b $IP`
- If you're not on C9, you need to find another way to serve the web application (WAMP, LAMP, etc.)
+8. Run `rake db:migrate`
+9. Run the app
+  - On C9, the command is `rails s -p $PORT -b $IP`
+  - If you're not on C9, you need to find another way to serve the web application (WAMP, LAMP, etc.)
 
 This app was created by:
 - Erik Jacobson
