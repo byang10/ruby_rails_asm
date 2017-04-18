@@ -1,6 +1,6 @@
-== README
+## README
 
-=== To install this app, you must complete the following steps:
+### To install this app, you must complete the following steps:
 
 1. Go to https://github.com/chasb96/ruby_rails_asm
 2. Fork your own copy of the repository (click fork at the top right of Github)
@@ -12,9 +12,8 @@
 7. Run `bundle install` to install dependencies
 8. Run the app
 
-- On C9, the command is `rails s -p $PORT -b $IP`
-- If you're not on C9, you need to find another way to serve the web application (WAMP, LAMP, etc.)
----
+ On C9, the command is `rails s -p $PORT -b $IP`
+ If you're not on C9, you need to find another way to serve the web application (WAMP, LAMP, etc.)
 
 This app was created by:
 - Erik Jacobson
